@@ -42,7 +42,7 @@ class OCT_Upload_View(APIView):
                 count=0
                 for category in settings.OCT_CATEGORIES:
                     defect_output.update({
-                        category : defect_in_percentage[count]
+                        category : round(defect_in_percentage[count],3)
                     })
                     count = count + 1
                 output = settings.OCT_CATEGORIES[np.argmax(predictions[0])]

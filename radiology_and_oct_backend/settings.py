@@ -129,7 +129,7 @@ print("---------------------------------",XRAY_MODEL_URL)
 XRAY_MODEL = tk.models.load_model(XRAY_MODEL_URL)
 
 XRAY_CATEGORIES = [
-    "Pleumonia",
+    "Pneumonia",
     "Normal"
 ]
 XRAY_IMG_SIZE = 500

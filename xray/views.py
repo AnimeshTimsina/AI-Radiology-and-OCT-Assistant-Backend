@@ -43,12 +43,15 @@ class XRAY_Upload_View(APIView):
                 defect_output = {}
                 # count=0
                 defect_output.update({
-                    "Pleumonia" : defect_in_percentage[0],
-                    "Normal": 100-defect_in_percentage[0]
+                    "Pneumonia" : round(defect_in_percentage[0],3),
+                    "Normal": round(100-defect_in_percentage[0],3)
                 })
                 print("Defect output........................",defect_output)
+                max_key = max(defect_output, key=defect_output.get)
+                output = max_key
+
                     # count = count + 1
-                output = settings.XRAY_CATEGORIES[np.argmax(predictions[0])]
+                # output = settings.XRAY_CATEGORIES[np.argmax(predictions[0])]
                 print("Final Output........................",output)
 
                 # uploaded = OCT_Image.objects.order_by('-id')[0]
