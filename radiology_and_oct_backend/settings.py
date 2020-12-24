@@ -111,8 +111,11 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/media/'
 
-MODEL_URL = os.path.join(BASE_DIR,'data/Final-4-conv,32-nodes,1-dense,1582188407')
-OCT_MODEL = tk.models.load_model(MODEL_URL)
+OCT_MODEL_URL = os.path.join(BASE_DIR,'data/Final-4-conv,32-nodes,1-dense,1582188407')
+# print("---------------------------------------------------",OCT_MODEL_URL)
+OCT_MODEL = tk.models.load_model(OCT_MODEL_URL)
+
+
 OCT_CATEGORIES = [
     "Choroidal neovascularization(CNV)", 
     "Diabetic macular edema (DME)", 
@@ -120,6 +123,16 @@ OCT_CATEGORIES = [
     "Normal"
 ]
 OCT_IMG_SIZE = 80
+
+XRAY_MODEL_URL = os.path.join(BASE_DIR,'data/my_model')
+print("---------------------------------",XRAY_MODEL_URL)
+XRAY_MODEL = tk.models.load_model(XRAY_MODEL_URL)
+
+XRAY_CATEGORIES = [
+    "Pleumonia",
+    "Normal"
+]
+XRAY_IMG_SIZE = 500
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'

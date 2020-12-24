@@ -7,4 +7,3 @@ class OCT_Image_Serializer(serializers.ModelSerializer):
         fields = ['image']
     
     
-

@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "/Users/animeshtimsina/Documents/major_project_backend/venv/bin/python"
+    "python.pythonPath": "/Users/animeshtimsina/Documents/major_project_backend/venv/bin/python",
+    "git.ignoreLimitWarning": true
 }

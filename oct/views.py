@@ -70,3 +70,5 @@ class OCT_Upload_View(APIView):
             response.headers = "Set-Cookie", "HttpOnly;Secure;SameSite=Strict"
             return response
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
