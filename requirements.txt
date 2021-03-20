@@ -9,7 +9,7 @@ dj-database-url==0.5.0
 Django==3.0.6
 django-cors-headers==3.2.1
 django-heroku==0.3.1
-djangorestframework==3.11.0
+djangorestframework==3.11.2
 flatbuffers==1.12
 gast==0.3.3
 google-auth==1.14.2
